@@ -1,0 +1,29 @@
+.s1 {
+    height: 9vh;    
+}
+
+.navbar {
+    padding: .2em 2em .2em 2em;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.navbar-brand {
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+}
+
+.navbar-nav {
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+
+

@@ -1,0 +1,43 @@
+.cover {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 91vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    font-size: 24px;
+    color: #92BBD8;
+    margin: 0;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+    line-height: 1em;
+}
+
+.subtitle {
+    font-size: 48px;
+    font-weight: 800;
+    color: #92BBD8;
+}
+
+.button-container {
+    padding-top: 1em;
+}
+
+.button {
+    border-radius: 50px;
+    padding: 1em 1.5em
+
+}
+
+.button:hover {
+    transition: 0.5s;
+    opacity: 75%;
+}

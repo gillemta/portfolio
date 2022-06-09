@@ -1,0 +1,28 @@
+.main-container {
+    padding-top: 10em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 10em 0;
+    grid-template-areas:
+        "about about"
+        "experience experience"
+        "skills skills"
+        "projects projects"
+}
+
+app-bio {
+    grid-area: about;
+}
+
+app-work {
+    grid-area: experience;
+}
+
+app-skills {
+    grid-area: skills;
+}
+
+app-projects {
+    grid-area: projects;
+}
