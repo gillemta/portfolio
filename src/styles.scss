@@ -93,6 +93,15 @@ p, li, label, input {
     color: $secondaryColor;
 }
 
+.progress {
+    background-color:$mainColor !important;
+    opacity: 75;
+}
+
+.progress-bar {
+    background-color:$mainColor;
+}
+
 @media screen and (max-width: 1250px) {
     .main-container{
         width: 70%;
