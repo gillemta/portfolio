@@ -12,4 +12,12 @@ export class WorkComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scroll() {
+    document.getElementById("work").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    })
+  }
+
 }

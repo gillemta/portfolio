@@ -12,4 +12,12 @@ export class SkillsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scroll() {
+    document.getElementById("skills").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    })
+  }
+
 }

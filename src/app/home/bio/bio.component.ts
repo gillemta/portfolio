@@ -12,4 +12,11 @@ export class BioComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scroll() {
+    document.getElementById("bio").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    })
+  }
 }

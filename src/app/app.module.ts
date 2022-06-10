@@ -26,7 +26,7 @@ import { CoverComponent } from './home/cover/cover.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [BioComponent,WorkComponent,SkillsComponent,ProjectsComponent,ContactComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

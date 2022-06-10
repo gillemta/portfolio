@@ -38,8 +38,9 @@ p, li, label, input {
     padding: 1em 1em 1em 1em
 }
 
-.navbar .navbar-expand-lg .fixed-top {
+.navbar {
     background-color: $mainColor;
+    opacity: 95%;
 }
 
 .navbar-toggler {
