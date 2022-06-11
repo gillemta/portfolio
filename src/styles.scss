@@ -103,6 +103,18 @@ p, li, label, input {
     background-color:$mainColor;
 }
 
+.image-body {
+    background-color: $mainColor;
+}
+
+.button:disabled {
+    background-color: $borderColor;
+}
+
+.page-circle {
+    background-color: $borderColor;
+}
+
 @media screen and (max-width: 1250px) {
     .main-container{
         width: 70%;
