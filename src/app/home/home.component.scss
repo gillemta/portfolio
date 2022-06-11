@@ -9,6 +9,7 @@
         "experience experience"
         "skills skills"
         "projects projects"
+        "contact contact"
 }
 
 app-bio {
@@ -25,4 +26,8 @@ app-skills {
 
 app-projects {
     grid-area: projects;
+}
+
+app-contact {
+    grid-area: contact;
 }

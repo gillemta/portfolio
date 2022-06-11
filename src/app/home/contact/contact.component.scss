@@ -1,0 +1,39 @@
+.s2 {
+    margin-bottom: 6em;
+}
+
+h4 {
+    font-weight: 800;
+    font-size: 1.75em;
+    padding-bottom: 1em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 2em;
+}
+
+.form-container {
+    margin: auto;
+    width: 800px;
+    height: 400px;
+    padding-bottom: 3em;
+}
+
+.button-container {
+    display: flex;
+    padding-top: 1em;
+}
+
+.button {
+    border-radius: 5px;
+    border: 0px;
+    padding: .5em .75em;
+    margin: auto;
+    width:100px;
+    height:40px;
+    background-color: #003459;
+    color:white;
+}
