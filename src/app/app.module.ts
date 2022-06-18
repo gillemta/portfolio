@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AnimateInModule } from 'ngx-animate-in';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -26,7 +28,9 @@ import { FooterComponent } from './home/footer/footer.component';
     FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    AnimateInModule
   ],
   providers: [BioComponent,WorkComponent,SkillsComponent,ProjectsComponent,ContactComponent],
   bootstrap: [AppComponent]

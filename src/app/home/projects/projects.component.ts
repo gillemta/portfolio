@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import AOS from 'aos'
 
 @Component({
   selector: 'app-projects',
@@ -10,6 +11,13 @@ export class ProjectsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    AOS.init({
+      easing: 'ease-back-out',
+      duration: 800,
+      delay: 0,
+      once: false,
+      disable: 'mobile'
+   });
   }
 
   scroll() {

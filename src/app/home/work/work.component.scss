@@ -1,4 +1,53 @@
 h4 {
     font-weight: 800;
     font-size: 1.75em;
+    padding-bottom: 1em;
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 1.25em;
+    margin-bottom: 0;
+}
+
+h6 {
+    font-weight:700;
+    font-size: 1.125em;
+}
+
+.s2 {
+    overflow: hidden;
+}
+
+.container {
+    padding-bottom: 2em;
+}
+
+.card-container {
+    height: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.image-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:33.3%;
+    height: 175px;
+    border-radius: 5px 0 0 5px;
+}
+
+.card-image {
+    max-width: 75%;
+    max-height: 63%;
+}
+
+.card-body {
+    width:66.7%;
+    height: 175px;
 }
