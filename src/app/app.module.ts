@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AnimateInModule } from 'ngx-animate-in';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -13,6 +12,7 @@ import { ProjectsComponent } from './home/projects/projects.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { CoverComponent } from './home/cover/cover.component';
 import { FooterComponent } from './home/footer/footer.component';
+import { DownloadService } from './services/download.service';
 
 @NgModule({
   declarations: [
@@ -29,10 +29,9 @@ import { FooterComponent } from './home/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    AnimateInModule
+    HttpClientModule,
   ],
-  providers: [BioComponent,WorkComponent,SkillsComponent,ProjectsComponent,ContactComponent],
+  providers: [BioComponent,WorkComponent,SkillsComponent,ProjectsComponent,ContactComponent,DownloadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
