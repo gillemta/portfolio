@@ -2,25 +2,25 @@
     <div class="container">
         <h4>Contact Me</h4>
         <div class="form-container" data-aos="zoom-in">
-            <form>
+            <form #contactInfo="ngForm" (ngSubmit)="onSubmit(contactInfo.value)">
                 <div class="form-group">
                     <label for="first">First Name</label>
-                    <input type="first" class="form-control" id="first" placeholder="">
+                    <input name="first" class="form-control" id="first" [(ngModel)]="contact.first" required>
                 </div>
                 <div class="form-group">
                     <label for="last">Last Name</label>
-                    <input type="last" class="form-control" id="last" placeholder="">
+                    <input name="last" class="form-control" id="last" [(ngModel)]="contact.last" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="">
+                    <input name="email" class="form-control" id="email" [(ngModel)]="contact.email" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea class="form-control" id="message" rows="5"></textarea>
+                    <textarea name="message" class="form-control" id="message" rows="5" [(ngModel)]="contact.message" required></textarea>
                 </div>
                 <div class="button-container">
-                    <button class="button">Submit</button>
+                    <button name="submit" class="button">Submit</button>
                 </div>
             </form>
         </div>

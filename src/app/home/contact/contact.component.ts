@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import AOS from 'aos'
+import { ContactService } from 'src/app/services/contact.service';
+
 
 @Component({
   selector: 'app-contact',
@@ -7,8 +9,15 @@ import AOS from 'aos'
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  
+  contact = {
+    first: "",
+    last: "",
+    email: "",
+    message: ""
+  }
 
-  constructor() { }
+  constructor(private contactService: ContactService) { }
 
   ngOnInit(): void {
     AOS.init({
@@ -26,6 +35,11 @@ export class ContactComponent implements OnInit {
       block: "start",
       inline: "nearest"
     })
+  }
+
+  onSubmit(contact) {
+    console.log(contact)
+    this.contactService.submitContact(contact).subscribe()
   }
 
 }
