@@ -72,7 +72,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "portolio:build:production"
+              "browserTarget": "portolio:build:production",
+              "host": "tashangillem.com"
             }
           }
         },
