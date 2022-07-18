@@ -32,13 +32,14 @@
     "bootstrap-icons": "^1.8.3",
     "font-awesome": "^4.7.0",
     "ngx-animate-in": "^1.0.1",
+    "node": "^14.20.0",
+    "node-sass": "^4.14.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1100.5",
-    "@angular/cli": "^14.0.5",
     "@angular/compiler-cli": "^11.0.9",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
@@ -54,9 +55,5 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
-  },
-  "engines": {
-    "node": "16.15.1",
-    "npm": "6.14.10"
   }
 }
