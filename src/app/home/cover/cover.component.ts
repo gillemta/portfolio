@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DownloadService } from 'src/app/services/download.service';
 
 @Component({
   selector: 'app-cover',
@@ -8,19 +7,17 @@ import { DownloadService } from 'src/app/services/download.service';
 })
 export class CoverComponent implements OnInit {
 
-  constructor(private downloadService: DownloadService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
   onClick() {
-    this.downloadService.getFile().subscribe( blob => {
-      const a = document.createElement('a')
-      const objectURL = URL.createObjectURL(blob)
-      a.href = objectURL
-      a.download = 'resume.pdf'
-      a.click()
-      URL.revokeObjectURL(objectURL)
-    })
+      const link = document.createElement('a');
+      link.setAttribute('type', 'hidden');
+      link.href = '../../../assets/resume.pdf';
+      link.download = 'resume.pdf';
+      link.click();
+      link.remove();
   }
 }

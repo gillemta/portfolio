@@ -13,7 +13,6 @@ import { ProjectsComponent } from './home/projects/projects.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { CoverComponent } from './home/cover/cover.component';
 import { FooterComponent } from './home/footer/footer.component';
-import { DownloadService } from './services/download.service';
 import { ContactService } from './services/contact.service';
 
 @NgModule({
@@ -34,7 +33,7 @@ import { ContactService } from './services/contact.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [BioComponent,WorkComponent,SkillsComponent,ProjectsComponent,ContactComponent,DownloadService,ContactService],
+  providers: [BioComponent,WorkComponent,SkillsComponent,ProjectsComponent,ContactComponent,ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

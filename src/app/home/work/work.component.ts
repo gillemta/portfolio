@@ -21,11 +21,10 @@ export class WorkComponent implements OnInit {
   }
 
   scroll() {
-    document.getElementById("work").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest"
-    })
+    const yOffset = -160
+    const element = document.getElementById("work");
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({top: y, behavior: 'smooth'})
   }
 
 }
