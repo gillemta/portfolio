@@ -37,7 +37,6 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(contact) {
-    console.log(contact)
     this.contactService.submitContact(contact).subscribe()
   }
 

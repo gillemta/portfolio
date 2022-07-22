@@ -9,14 +9,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 
 export class ContactService {
 
-  url: string = "http://localhost:3000/contact"
+  url: string = "https://powerful-gorge-86648.herokuapp.com/contact"
 
   constructor(private httpClient: HttpClient) { }
 
   submitContact(contact: object): Observable<any>{
     const headers = {'content-type': 'application/json'};
     const body = JSON.stringify(contact)
-    console.log("***", body)
     return this.httpClient.post(this.url, body, {'headers': headers}) 
   }
 }
