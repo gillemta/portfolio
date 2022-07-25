@@ -12,10 +12,14 @@ h3 {
     padding-bottom: 2em;
 }
 
+.carousel-indicators {
+    margin-bottom: -1rem;
+}
+
 .card-container {
     display: flex;
-    justify-content: space-between;
-    width: 850px;
+    justify-content: space-evenly;
+    width: 100%;
     margin: auto;
     padding-bottom: 1em
 }
@@ -60,10 +64,62 @@ h3 {
     color:white;
 }
 
-.page-circle {
-    margin: auto;
-    height: 5px;
-    width: 5px;
+.carousel-control-prev,
+.carousel-control-next {
     border-radius: 50%;
+    height: 3rem;
+    width: 3rem; 
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    margin: auto;
 }
 
+@media (max-width: 1200px) {
+    .card {
+        width: 200px;
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        width: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1em;
+    }
+    p {
+        font-size: 12px;
+    }
+    .card {
+        width: 140px;
+    }
+}
+
+@media (max-width: 576px) {
+    h3 {
+        font-size: 1.25em;
+    }
+    p {
+        font-size: 16px;
+    }
+    #carouselDesktop {
+        display: none;
+    }
+    .carousel-item {
+        margin-right: 0;
+    }
+    .card {
+        width: 200px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 576px) {
+    #carouselMobile {
+        display: none;
+    }
+}

@@ -9,6 +9,10 @@ p {
     padding-bottom: 1em
 }
 
+.s2 {
+    padding: 1em 1.75em 1em 1.75em
+}
+
 .col-5 {
     display: flex;
     flex-direction: column;
@@ -37,4 +41,26 @@ p {
     justify-content: center;
     font-size: 1.3em;
     margin: .25em .25em .25em .25em
+}
+
+@media (max-width: 992px) {
+    .subtitle {
+        padding: 0 .75em 1em .75em
+    }
+    .row {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .col-7 {
+        width: 100%;
+        padding: 0 1.75em 0 1.75em
+    }
+    .col-5 {
+        width: 100%;
+        padding: 0 1.75em 1em 1.75em
+    }
+    .profile {
+        max-width: 15em;
+        max-height: 15em;
+    }
 }

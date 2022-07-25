@@ -72,18 +72,30 @@ p, li, label, input {
 .progress-bar {
   background-color: #003459;
 }
+.carousel-indicators button {
+  background-color: rgba(70, 70, 70, 0.25) !important;
+}
+.carousel-indicators .active {
+  background-color: #003459 !important;
+}
 .image-body {
   background-color: #003459;
 }
 .button:disabled {
   background-color: #858786;
 }
-.page-circle {
-  background-color: #858786;
+.carousel-control-prev,
+.carousel-control-next {
+  background: #003459 !important;
 }
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1200px) {
   .main-container {
     width: 70%;
+  }
+}
+@media (max-width: 576px) {
+  .main-container {
+    width: 80%;
   }
 }
 @charset "UTF-8";/*!

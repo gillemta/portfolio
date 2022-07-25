@@ -17,7 +17,7 @@ h4 {
 
 .form-container {
     margin: auto;
-    width: 800px;
+    width: 75%;
     height: 400px;
     padding-bottom: 3em;
 }
@@ -36,4 +36,11 @@ h4 {
     height:40px;
     background-color: #003459;
     color:white;
+}
+
+@media (max-width: 576px) {
+    .form-container {
+        width: auto;
+        margin: 0
+    }
 }

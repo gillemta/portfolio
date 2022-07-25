@@ -20,11 +20,7 @@ h6 {
 }
 
 .container {
-    padding-bottom: 2em;
-}
-
-.card-container {
-    height: auto;
+    padding-bottom: 0;
 }
 
 .card {
@@ -38,7 +34,6 @@ h6 {
     justify-content: center;
     align-items: center;
     width:33.3%;
-    height: 200px;
     border-radius: 5px 0 0 5px;
 }
 
@@ -49,5 +44,15 @@ h6 {
 
 .card-body {
     width:66.7%;
-    height: 200px;
+}
+
+@media (max-width: 992px) {
+    .image-body {
+        width: 0;
+    }
+
+    .card-body {
+        width: 100%;
+    }
+
 }
