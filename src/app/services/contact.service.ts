@@ -16,6 +16,6 @@ export class ContactService {
   submitContact(contact: object): Observable<any>{
     const headers = {'content-type': 'application/json'};
     const body = JSON.stringify(contact)
-    return this.httpClient.post(this.url, body, {'headers': headers}) 
+    return this.httpClient.post(this.url, body, {'headers': headers, observe: 'response'}) 
   }
 }

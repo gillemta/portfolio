@@ -1,14 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import AOS from 'aos'
+import { MatSnackBar } from '@angular/material';
 import { ContactService } from 'src/app/services/contact.service';
 
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ContactComponent implements OnInit {
+  status: number = 0;
   
   contact = {
     first: "",
@@ -17,7 +20,7 @@ export class ContactComponent implements OnInit {
     message: ""
   }
 
-  constructor(private contactService: ContactService) { }
+  constructor(private contactService: ContactService, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     AOS.init({
@@ -37,7 +40,25 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(contact) {
-    this.contactService.submitContact(contact).subscribe()
+    this.contactService.submitContact(contact).subscribe(response => {
+      this.status = response.status;
+
+      if (this.status === 200) {
+        this.snackBar.open("Message was successfully sent!", "", {
+          duration: 4000,
+          panelClass: ['snack-bar-success']
+        })
+      }
+    })
+    
+     if (this.status === 0) {
+      this.snackBar.open("Message could not be sent (Server is down)", "", {
+        duration: 4000,
+        panelClass: ['snack-bar-failure']
+      })
+        
+    }
+    this.status = 0;
   }
 
 }

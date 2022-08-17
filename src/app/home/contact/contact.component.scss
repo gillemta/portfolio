@@ -38,6 +38,20 @@ h4 {
     color:white;
 }
 
+.snack-bar-success {
+    background-color: green;
+    color: rgba(255,255,255,.8);
+}
+
+.snack-bar-failure {
+    background-color: red;
+    color: rgba(255,255,255,.8);
+}
+
+.mat-simple-snackbar {
+    justify-content: center !important;
+}
+
 @media (max-width: 576px) {
     .form-container {
         width: auto;

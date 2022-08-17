@@ -2,7 +2,7 @@
     <div class="container">
         <h4>Contact Me</h4>
         <div class="form-container" data-aos="zoom-in">
-            <form #contactInfo="ngForm" (ngSubmit)="onSubmit(contactInfo.value)">
+            <form #contactInfo="ngForm" (ngSubmit)="onSubmit(contactInfo.value); contactInfo.resetForm()">
                 <div class="form-group">
                     <label for="first">First Name</label>
                     <input name="first" class="form-control" id="first" [(ngModel)]="contact.first" required>
