@@ -367,7 +367,7 @@ class ContactComponent {
     constructor(contactService, snackBar) {
         this.contactService = contactService;
         this.snackBar = snackBar;
-        this.status = 0;
+        this.status = 200;
         this.contact = {
             first: "",
             last: "",
@@ -393,20 +393,20 @@ class ContactComponent {
     onSubmit(contact) {
         this.contactService.submitContact(contact).subscribe(response => {
             this.status = response.status;
-            if (this.status === 200) {
-                this.snackBar.open("Message was successfully sent!", "", {
-                    duration: 4000,
-                    panelClass: ['snack-bar-success']
-                });
-            }
         });
+        if (this.status === 200) {
+            this.snackBar.open("Message was successfully sent!", "", {
+                duration: 4000,
+                panelClass: ['snack-bar-success']
+            });
+        }
         if (this.status === 0) {
             this.snackBar.open("Message could not be sent (Server is down)", "", {
                 duration: 4000,
                 panelClass: ['snack-bar-failure']
             });
         }
-        this.status = 0;
+        // this.status = 0;
     }
 }
 ContactComponent.ɵfac = function ContactComponent_Factory(t) { return new (t || ContactComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_contact_service__WEBPACK_IMPORTED_MODULE_2__["ContactService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSnackBar"])); };

@@ -11,7 +11,7 @@ import { ContactService } from 'src/app/services/contact.service';
   encapsulation: ViewEncapsulation.None
 })
 export class ContactComponent implements OnInit {
-  status: number = 0;
+  status: number = 200;
   
   contact = {
     first: "",
@@ -42,15 +42,15 @@ export class ContactComponent implements OnInit {
   onSubmit(contact) {
     this.contactService.submitContact(contact).subscribe(response => {
       this.status = response.status;
-
-      if (this.status === 200) {
-        this.snackBar.open("Message was successfully sent!", "", {
-          duration: 4000,
-          panelClass: ['snack-bar-success']
-        })
-      }
     })
-    
+
+    if (this.status === 200) {
+      this.snackBar.open("Message was successfully sent!", "", {
+        duration: 4000,
+        panelClass: ['snack-bar-success']
+      })
+    }
+
      if (this.status === 0) {
       this.snackBar.open("Message could not be sent (Server is down)", "", {
         duration: 4000,
@@ -58,7 +58,7 @@ export class ContactComponent implements OnInit {
       })
         
     }
-    this.status = 0;
+    // this.status = 0;
   }
 
 }
