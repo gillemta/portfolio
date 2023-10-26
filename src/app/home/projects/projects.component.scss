@@ -8,6 +8,10 @@ h3 {
     font-size: 1.25em;
 }
 
+button a {
+    text-decoration: none;
+    color: white;
+}
 .container {
     padding-bottom: 2em;
 }
@@ -25,7 +29,8 @@ h3 {
 }
 
 .card {
-    width: 250px;
+    width: 75%;
+    max-width: 450px;
     height: auto;
     border-radius: 10px;
 }
@@ -47,6 +52,12 @@ h3 {
     filter: invert(1);
     max-height: 75%;
     max-width: 75%;
+}
+
+#card1 .card-image {
+    filter: none;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .button-container {
@@ -77,13 +88,13 @@ h3 {
 
 @media (max-width: 1200px) {
     .card {
-        width: 200px;
+        width: 75%;
     }
 }
 
 @media (max-width: 992px) {
     .card {
-        width: 160px;
+        width: 75%;
     }
 }
 
@@ -95,7 +106,7 @@ h3 {
         font-size: 12px;
     }
     .card {
-        width: 140px;
+        width: 75%;
     }
 }
 
@@ -113,7 +124,7 @@ h3 {
         margin-right: 0;
     }
     .card {
-        width: 200px;
+        width: 75%;
         margin: auto;
     }
 }
